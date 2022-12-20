@@ -2,14 +2,14 @@ package org.example;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.manager.SeleniumManager;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.HardwareAbstractionLayer;
 
 
-public class ChromeTest {
+public class FirefoxTest {
 
     static  {
         SystemInfo si = new SystemInfo();
@@ -22,9 +22,9 @@ public class ChromeTest {
     }
 
     @Test
-    public void chromeTest() {
+    public void firefoxTest() {
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
         driver.quit();
